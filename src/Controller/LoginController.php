@@ -1,14 +1,15 @@
 <?php
 
 namespace App\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class LoginController{
+class LoginController extends abstractController{
 
 
     public function login(){
 
         $content = "page login";
-        return new Response ($content);
+        return $this->render('login.html.twig');
     }
 }

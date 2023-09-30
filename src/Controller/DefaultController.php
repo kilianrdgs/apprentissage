@@ -1,14 +1,22 @@
 <?php
 
 namespace App\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-class DefaultController{
+class DefaultController extends abstractController{
 
     public function accueil(){
 
-        $content = "page d'accueil";
+        $logged = false; #simuler une connexion
 
-        return new Response ($content);
+        if($logged){
+            return $this->render('base.html.twig');
+        } else{
+            return $this->redirectToRoute('login');
+        }
+
+
+
     }
 
 }
