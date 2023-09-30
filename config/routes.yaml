@@ -1,5 +1,15 @@
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+  resource: ../src/Controller/
+  type: annotation
+
+accueil:
+  path: /
+  controller: App\Controller\DefaultController::accueil
+
+login:
+  path: /login
+  controller: App\Controller\LoginController::login
+
+register:
+  path: /register
+  controller: App\Controller\RegisterController::register
