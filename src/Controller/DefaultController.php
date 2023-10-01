@@ -7,7 +7,7 @@ class DefaultController extends abstractController{
 
     public function accueil(){
 
-        $logged = false; #simuler une connexion
+        $logged = true; #simuler une connexion
 
         if($logged){
             return $this->render('base.html.twig');
